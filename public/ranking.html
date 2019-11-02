@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,6 +17,18 @@
 </head>
 
 <body>
+    <button onclick="rank1NextClick()">
+        <p id="rank1-name"></p>
+        <p id="rank1-distanse"></p>
+    </button>
+    <button onclick="rank2NextClick()">
+        <p id="rank2-name"></p>
+        <p id="rank2-distanse"></p>
+    </button>
+    <button onclick="rank3NextClick()">
+        <p id="rank3-name"></p>
+        <p id="rank3-distanse"></p>
+    </button>
 
     <p id="load">Firebase SDK Loading</p>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
@@ -23,4 +36,5 @@
 
     <script defer src="js/ranking.js"></script>
 </body>
+
 </html>
