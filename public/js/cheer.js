@@ -8,6 +8,7 @@ var urlParams = new URLSearchParams(window.location.search);
 id = urlParams.get('id');
 var artistIdRef = firebase.database().ref('/artist/' + id);
 
+
 artistIdRef.on('value', function (snapshot) {
     console.log('value', snapshot.val().color)
     document.getElementById('cheer-style').style.backgroundColor = snapshot.val().color;
@@ -29,7 +30,6 @@ var timer = window.setInterval(() => {
 
 var timer2 = window.setInterval(() => {
     countUpdateData();      // displayData 関数を実行
-
 }, 60000); // 1minごとに実行
 
 function countUpdateData() {
@@ -49,14 +49,13 @@ function countUpdateData() {
 // データを表示する displayData 関数
 function displayData() {
     var txt = document.getElementById("txt");   // データを表示するdiv要素の取得
-    txt.innerHTML = "x: " + aX + "<br>"         // x軸の値
-        + "y: " + aY + "<br>"         // y軸の値
-        + "z: " + aZ + "<br>"
-        + "sum: " + sum + "<br>";                 // z軸の値
+    txt.innerHTML = sum + "point";                 // z軸の値
 }
 
 function go() {
     countUpdateData();
     window.location.href = "thankyou.html?" + "point=" + Math.floor(sum);
 }
+
+
 

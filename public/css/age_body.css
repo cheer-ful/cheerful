@@ -1,0 +1,29 @@
+@charset "UTF-8"
+
+body{
+  width: 414px;
+  height: 736px;
+}
+
+.ageage{
+  width: 350px;
+  height: 284px;
+  background: #FCFCFC;
+  border-radius: 21px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.age_txt{
+  font-family: HGHeiseiKakugothictaiW7;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  text-align: center;
+}
+
+.orange{
+  color: #FFCB64;
+}

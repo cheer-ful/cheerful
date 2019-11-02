@@ -4,6 +4,47 @@ var rank1Id = "";
 var rank2Id = "";
 var rank3Id = "";
 
+
+// 位置情報
+// watch_id = navigator.geolocation.watchPosition(geo, function (e) { alert(e.message); }, { "enableHighAccuracy": true, "timeout": 20000, "maximumAge": 2000 });
+
+function geo(position) {
+    var geo_text = "緯度:" + position.coords.latitude + "\n";
+    geo_text += "経度:" + position.coords.longitude + "\n";
+    geo_text += "高度:" + position.coords.altitude + "\n";
+    geo_text += "位置精度:" + position.coords.accuracy + "\n";
+    geo_text += "高度精度:" + position.coords.altitudeAccuracy + "\n";
+    geo_text += "移動方向:" + position.coords.heading + "\n";
+    geo_text += "速度:" + position.coords.speed + "\n";
+    var date = new Date(position.timestamp);
+    //サンプルデータ(オアシス21)
+    var tLatitude = 35.1708924;
+    var tLongitude = 136.9095254;
+    //サンプルデータと現時点との角度測定。
+    tLatitude *= Math.PI / 180;
+    tLongitude *= Math.PI / 180;
+    var gLatitude = position.coords.latitude * Math.PI / 180;
+    var gLongitude = position.coords.longitude * Math.PI / 180;
+    var Between = 0.0;
+    var time = 0.0;
+    //二点間の距離
+    Between += 6371 * Math.acos(Math.cos(tLatitude) * Math.cos(gLatitude) * Math.cos(gLongitude - tLongitude) + Math.sin(tLatitude) * Math.sin(gLatitude)) + "\n";
+    geo_text += "二点間の距離" + Between + "km" + "\n";
+    // console.log(Between);
+    //時間
+    time += ((6371 * Math.acos(Math.cos(tLatitude) * Math.cos(gLatitude) * Math.cos(gLongitude - tLongitude) + Math.sin(tLatitude) * Math.sin(gLatitude))) * 1000) / 77 + "\n";
+    geo_text += "かかる時間" + time + "分" + "\n";
+    // console.log(time);
+    // geo_text += "取得時刻:" + date.toLocaleString() + "\n";
+    geo_text += "更新回数:" + (++num) + "\n";
+    var rad = Math.atan2(gLatitude - tLatitude, gLongitude - tLongitude);
+    // var angle = rad * (180 / Math.PI) ; // ラジアンを度数へ変換
+    geo_text += "角度" + (rad * (180 / Math.PI) + 180);
+    console.log(rad);
+    document.getElementById('position_view').innerHTML = geo_text;
+    // return rad; //二点間角度
+}
+
 // artistRef.push({ name: "name", point: 0, location_x: "", location_y: "", color: "green" });
 artistRef.on('value', function (snapshot) {
 
