@@ -1,0 +1,20 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.top-image{
+  background-image: url("./images/top.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.top-loading-style{
+  margin-top: 500px;
+}
+
+.center{
+  text-align: center;
+}
