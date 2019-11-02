@@ -1,5 +1,13 @@
-
 var artistRef = firebase.database().ref('/artist');
+var artistIdRef = firebase.database().ref('/artist/-Lsev4ZFT9NaxPSBeDAr');
+
+console.log(artistIdRef);
+artistIdRef.update({
+    "name": "猫" //更に子の要素にアクセスするには / で区切って指定
+});
+artistIdRef.on('value', function (snapshot) {
+    console.log('value', snapshot.val().name)
+})
 
 var rank1Id = "";
 var rank2Id = "";
@@ -31,15 +39,15 @@ artistRef.on('value', function (snapshot) {
 });
 
 function rank1NextClick() {
-    window.location.href = "golive.html?" + rank1Id;
+    window.location.href = "golive.html?" + "id=" + rank1Id;
 }
 
 function rank2NextClick() {
-    window.location.href = "golive.html?" + rank2Id;
+    window.location.href = "golive.html?" + "id=" + rank2Id;
 }
 
 function rank3NextClick() {
-    window.location.href = "golive.html?" + rank3Id;
+    window.location.href = "golive.html?" + "id=" + rank3Id;
 }
 
 function object_array_sort(data, key, order, fn) {
