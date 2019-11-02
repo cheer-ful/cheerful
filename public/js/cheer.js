@@ -57,6 +57,6 @@ function displayData() {
 
 function go() {
     countUpdateData();
-    window.location.href = "thankyou.html?" + "point=" + sum;
+    window.location.href = "thankyou.html?" + "point=" + Math.floor(sum);
 }
 
