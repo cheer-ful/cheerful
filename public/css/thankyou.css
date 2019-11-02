@@ -11,8 +11,10 @@ body{
   height: 100vh;
 }
 
-.ageagebox{
-  background-color: white;
+.center{
+  text-align: center;
+}
+
+.img-circle{
   border-radius: 25px;
-  margin-left: 100px;
 }
