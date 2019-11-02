@@ -1,19 +1,10 @@
 var artistRef = firebase.database().ref('/artist');
-var artistIdRef = firebase.database().ref('/artist/-Lsev4ZFT9NaxPSBeDAr');
-
-console.log(artistIdRef);
-artistIdRef.update({
-    "name": "猫" //更に子の要素にアクセスするには / で区切って指定
-});
-artistIdRef.on('value', function (snapshot) {
-    console.log('value', snapshot.val().name)
-})
 
 var rank1Id = "";
 var rank2Id = "";
 var rank3Id = "";
 
-// artistRef.push({ name: "name", point: 1, location_x: "", location_y: "" });
+// artistRef.push({ name: "name", point: 0, location_x: "", location_y: "", color: "green" });
 artistRef.on('value', function (snapshot) {
 
     valueArray = Object.values(snapshot.val());
