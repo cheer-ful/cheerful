@@ -1,10 +1,11 @@
 body{
   margin: 0;
   padding: 0;
+  margin-top: -16px;
 }
 
 .top-image{
-  background-image: url("./images/top.png");
+  background-image: url("../images/top.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
