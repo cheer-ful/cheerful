@@ -3,6 +3,7 @@ var aX = 0, aY = 0, aZ = 0;                     // 加速度の値を入れる�
 var sum = 0;
 var id = "";
 
+
 var urlParams = new URLSearchParams(window.location.search);
 id = urlParams.get('id');
 var artistIdRef = firebase.database().ref('/artist/' + id);
@@ -19,8 +20,6 @@ window.addEventListener("devicemotion", (dat) => {
     aX = dat.accelerationIncludingGravity.x;    // x軸の重力加速度（Android と iOSでは正負が逆）
     aY = dat.accelerationIncludingGravity.y;    // y軸の重力加速度（Android と iOSでは正負が逆）
     aZ = dat.accelerationIncludingGravity.z;    // z軸の重力加速度（Android と iOSでは正負が逆）
-
-    console.log(sum);
 
 });
 // 指定時間ごとに繰り返し実行される setInterval(実行する内容, 間隔[ms]) タイマーを設定
@@ -41,7 +40,7 @@ function countUpdateData() {
         tmpSum = tmpSum + sum;
     })
     artistIdRef.update({
-        "point": tmpSum
+        "point": Math.floor(tmpSum)
     });
 
 
@@ -58,6 +57,6 @@ function displayData() {
 
 function go() {
     countUpdateData();
-    window.location.href = "thankyou.html";
+    window.location.href = "thankyou.html?" + "point=" + sum;
 }
 
