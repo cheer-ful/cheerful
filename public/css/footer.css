@@ -1,0 +1,31 @@
+body{
+  margin: 0;
+  padding: 0;
+  /* margin-top: -16px; */
+}
+
+.user-back{
+  background-image: url("../images/user-back.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.stick-style{
+  text-align: center;
+  top: 75%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.stick-style2{
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  top: 90%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

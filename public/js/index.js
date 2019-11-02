@@ -1,5 +1,6 @@
-window.onload = function () {
-  this.setTimeout("GoNextPage()", 1000)
+
+window.onload = function(){
+  this.setTimeout(GoNextPage(),1000)
 }
 
 function GoNextPage() {
