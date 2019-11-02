@@ -17,23 +17,10 @@
 </head>
 
 <body>
-    <button onclick="rank1NextClick()">
-        <p id="rank1-name"></p>
-        <p id="rank1-distanse"></p>
-    </button>
-    <button onclick="rank2NextClick()">
-        <p id="rank2-name"></p>
-        <p id="rank2-distanse"></p>
-    </button>
-    <button onclick="rank3NextClick()">
-        <p id="rank3-name"></p>
-        <p id="rank3-distanse"></p>
-    </button>
-
-    <p id="load">Firebase SDK Loading</p>
+    <div class="ranking-body">
+        <div style="padding-top:150px;" onclick="go()"><img src="./images/ranking.svg" width="100%" /></div>
+    </div>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-
-
     <script defer src="js/ranking.js"></script>
 </body>
 

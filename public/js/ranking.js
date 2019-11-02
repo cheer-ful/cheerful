@@ -42,6 +42,10 @@ function rank3NextClick() {
     window.location.href = "golive.html?" + rank3Id;
 }
 
+function go() {
+    window.location.href = "cheer.html?Lsev4ZFT9NaxPSBeDAr";
+}
+
 function object_array_sort(data, key, order, fn) {
     //デフォは降順(DESC)
     var num_a = -1;
