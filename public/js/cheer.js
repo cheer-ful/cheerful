@@ -48,8 +48,8 @@ function countUpdateData() {
 
 // データを表示する displayData 関数
 function displayData() {
-    var txt = document.getElementById("txt");   // データを表示するdiv要素の取得
-    txt.innerHTML = sum + "point";                 // z軸の値
+    // var txt = document.getElementById("txt");   // データを表示するdiv要素の取得
+    // txt.innerHTML = sum + "point";                 // z軸の値
 }
 
 function go() {
