@@ -35,7 +35,7 @@
   </div>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
   <script defer type="text/javascript" src="./js/app.js"></script>
-  <script defer type="text/javascript" src="./js/cheer.js"></script>
+  <script defer type="text/javascript" src="./js/artist_live_now.js"></script>
   <script>
     toastr.options = {
       "positionClass": "toast-top-center",
@@ -56,6 +56,7 @@
       toastr.success('300円いただきました！');
     }
 
+    var artistIdRef = firebase.database().ref('/artist/-Lsh0SCxDudlM7JhY4NX');
     function redClick(){
       document.getElementById("blue2").classList.add('hidden');  
       document.getElementById("green2").classList.add('hidden');  
@@ -63,6 +64,9 @@
       document.getElementById("green1").classList.remove('hidden');  
       document.getElementById("red1").classList.add('hidden');  
       document.getElementById("red2").classList.remove('hidden');  
+      artistIdRef.update({
+        "color": "red"
+      });
     }
     function blueClick(){
       document.getElementById("red2").classList.add('hidden');  
@@ -71,6 +75,9 @@
       document.getElementById("green1").classList.remove('hidden');  
       document.getElementById("blue1").classList.add('hidden');  
       document.getElementById("blue2").classList.remove('hidden');  
+      artistIdRef.update({
+        "color": "blue"
+      });
     }
     function greenClick(){
       document.getElementById("red2").classList.add('hidden');  
@@ -79,6 +86,9 @@
       document.getElementById("blue1").classList.remove('hidden');  
       document.getElementById("green1").classList.add('hidden');  
       document.getElementById("green2").classList.remove('hidden');  
+      artistIdRef.update({
+        "color": "green"
+      });
     }
 
     $("#youtube").click(function() {
