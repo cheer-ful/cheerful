@@ -1,15 +1,16 @@
+@charset "UTF-8";
+
 body{
   margin: 0px;
   padding: 0px;
-}
-
-.ranking-body{
   background-image: url("../images/backcolor.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
+
+
 
 .center{
   text-align: center;
@@ -18,3 +19,86 @@ body{
 .img-circle{
   border-radius: 25px;
 }
+
+.con{
+  width: 333px;
+  height: 246px;
+  background: #FCFCFC;
+  border-radius: 21px;
+  margin: 0 auto;
+  padding-right: 36px;
+  padding-left: 36px;
+  margin-top: 10rem;
+}
+
+.close{
+  width: 35px;
+  height: 35px;
+  margin:0 0 0 auto;
+  border: none;
+  margin-left: 80%;
+  /* outline: none; */　 /*青色を消す*/
+}
+
+.pt_con{
+  text-align: center;
+}
+
+.pt_text_top{
+  display: flex;
+  margin: 0 auto;
+  width: 171px;
+  height: 86px;
+}
+
+.pt{
+  font-family: Futura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 85px;
+  color: #000000;
+  margin: 0;
+}
+
+.small{
+  font-family: Futura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  color: #000000;
+  margin: 0;
+  padding-top: 25px;
+}
+
+.ouen{
+  font-family: Futura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  margin: 0;
+}
+
+.nagesen_btn{
+  width: 262px;
+  height: 49px;
+  border: 4px solid #FFCB64;
+  box-sizing: border-box;
+  border-radius: 13px;
+  margin-top: 20px;
+  /* outline: none; */  /*青色を消す*/
+}
+
+.nagesen_btn p{
+  font-family: HGHeiseiKakugothictaiW7;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  margin: 0;
+}
+
