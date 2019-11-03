@@ -8,11 +8,9 @@ var urlParams = new URLSearchParams(window.location.search);
 id = urlParams.get('id');
 var artistIdRef = firebase.database().ref('/artist/' + id);
 
-
 artistIdRef.on('value', function (snapshot) {
     console.log('value', snapshot.val().color)
     document.getElementById('cheer-style').style.backgroundColor = snapshot.val().color;
-
 })
 
 // 加速度センサの値が変化したら実行される devicemotion イベント
@@ -31,6 +29,19 @@ var timer = window.setInterval(() => {
 var timer2 = window.setInterval(() => {
     countUpdateData();      // displayData 関数を実行
 }, 60000); // 1minごとに実行
+
+var timer3 = window.setInterval(() => {
+    changeColor();      // displayData 関数を実行
+}, 6000); // 1minごとに実行
+
+function changeColor() {
+    var artistIdRef = firebase.database().ref('/artist/' + id);
+
+    artistIdRef.on('value', function (snapshot) {
+        console.log('value', snapshot.val().color)
+        document.getElementById('cheer-style').style.backgroundColor = snapshot.val().color;
+    })
+}
 
 function countUpdateData() {
     var tmpSum = 0;
