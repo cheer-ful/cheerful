@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CheerFul</title>
+    <link href="./css/artist_live_now.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+</head>
+
+<body>
+  <div class="user-back">
+    <p class="colorChoice">カラーを選択</p>
+    <div class="aaa">
+      <img src="./images/red_no.svg" width="100px" id="red1" class="hidden" onclick="redClick()" />
+      <img src="./images/red_push.svg" width="100px" id="red2" class="" />
+      <img src="./images/blue_no.svg" width="100px" id="blue1" class="" onclick="blueClick()" />
+      <img src="./images/blue_push.svg" width="100px" id="blue2" class="hidden" />
+      <img src="./images/green_no.svg" width="100px" id="green1" class="" onclick="greenClick()" />
+      <img src="./images/green_push.svg" width="100px" id="green2" class="hidden" />
+    </div>
+    <p class="stick-style" id="youtube"><img src="./images/youtube.svg" width="80px" /></p>
+    <p class="stick-style2">ライブを終了する</p>
+  </div>
+  <script>
+    toastr.options = {
+      "positionClass": "toast-top-center",
+      "timeOut": "5000",
+    };
+    window.onload = function(){
+      setTimeout("next()",1000)
+    }
+    function next(){
+      toastr.success('20円いただきました！');
+      setTimeout("next2()",2500)
+    }
+    function next2(){
+      toastr.success('180円いただきました！');
+      setTimeout("next3()",2000)
+    }
+    function next3(){
+      toastr.success('300円いただきました！');
+    }
+
+    function redClick(){
+      document.getElementById("blue2").classList.add('hidden');  
+      document.getElementById("green2").classList.add('hidden');  
+      document.getElementById("blue1").classList.remove('hidden');  
+      document.getElementById("green1").classList.remove('hidden');  
+      document.getElementById("red1").classList.add('hidden');  
+      document.getElementById("red2").classList.remove('hidden');  
+    }
+    function blueClick(){
+      document.getElementById("red2").classList.add('hidden');  
+      document.getElementById("green2").classList.add('hidden');  
+      document.getElementById("red1").classList.remove('hidden');  
+      document.getElementById("green1").classList.remove('hidden');  
+      document.getElementById("blue1").classList.add('hidden');  
+      document.getElementById("blue2").classList.remove('hidden');  
+    }
+    function greenClick(){
+      document.getElementById("red2").classList.add('hidden');  
+      document.getElementById("blue2").classList.add('hidden');  
+      document.getElementById("red1").classList.remove('hidden');  
+      document.getElementById("blue1").classList.remove('hidden');  
+      document.getElementById("green1").classList.add('hidden');  
+      document.getElementById("green2").classList.remove('hidden');  
+    }
+
+    $("#youtube").click(function() {
+      window.location.href = "artist_live_after.html";
+    });
+  </script>
+</body>
+
+</html>

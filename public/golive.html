@@ -5,9 +5,75 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>CheerFul</title>
     <link href="./css/golive.css" rel="stylesheet">
-    <script type="text/javascript" src="./js/golive.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
   </head>
   <body>
-    this is golive
+    <div class="user-back">
+      <p id="c1"><img src="./images/center_far.gif" width="100%" /></p> 
+      <p id="c2" class="hidden" ><img src="./images/center_normal.gif" width="100%" /></p> 
+      <p id="c3" class="hidden" ><img src="./images/center_close.gif" width="100%" /></p> 
+      <p id="r1" class="hidden" ><img src="./images/right_far.gif" width="100%" style="position:absolute; right: 0px; top: 0px;" /></p> 
+      <p id="r2" class="hidden" ><img src="./images/right_normal.gif" width="100%" style="position:absolute; right: 0px; top: 0px;" /></p> 
+      <p id="r3" class="hidden" ><img src="./images/right_close.gif" width="100%" style="position:absolute; right: 0px; top: 0px;" /></p>  
+      <p id="l1" class="hidden" ><img src="./images/left_far.gif" width="100%" style="position:absolute; left: 0px; top: 0px;" /></p> 
+      <p id="l2" class="hidden" ><img src="./images/left_normal.gif" width="100%" style="position:absolute; left: 0px; top: 0px;" /></p> 
+      <p id="l3" class="hidden" ><img src="./images/left_close.gif" width="100%" style="position:absolute; left: 0px; top: 0px;" /></p> 
+
+      <p class="stick-style3 hidden" id="arrow"><img src="./images/background_arrow.gif" height="350px" /></p> 
+      <p class="sample1 stick-style">
+        <img src="./images/stick.svg" width="80px" id="stick-true" class="hidden"/>
+        <img src="./images/notuse.svg" width="60px" id="stick-false"/>
+      </p> 
+      <p class="stick-style2">応援する</p>
+    </div>
+    <script type="text/javascript" src="./js/jquery.pep.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.sample1').pep();
+      });       
+      var getPosition = function(){
+        const pos = $('.sample1').offset();
+        if(pos.top <= 350){
+          $(document).ready(function(){
+            $('.sample1').fadeOut(800);
+          });     
+          window.setTimeout("window.location.href = 'explainCheer.html'", 1000 );
+        } 
+      } 
+      setInterval(getPosition, 1000);
+
+      window.onload = function(){
+        setTimeout("next()",5000)
+      }
+      
+      function next(){
+        document.getElementById("c1").classList.add('hidden');  
+        document.getElementById("c2").classList.remove('hidden');  
+        setTimeout("next2()",5000)
+      }
+      
+      function next2(){
+        document.getElementById("c2").classList.add('hidden');  
+        document.getElementById("r2").classList.remove('hidden');  
+        setTimeout("next3()",5000)
+      }
+
+      function next3(){
+        document.getElementById("r2").classList.add('hidden');  
+        document.getElementById("r3").classList.remove('hidden');  
+        document.getElementById("arrow").classList.remove('hidden');  
+        document.getElementById("stick-false").classList.add('hidden');  
+        document.getElementById("stick-true").classList.remove('hidden');  
+        setTimeout("next4()",5000)
+      }
+      
+      function next4(){
+        document.getElementById("r3").classList.add('hidden');  
+        document.getElementById("c3").classList.remove('hidden');  
+        setTimeout("next5()",5000)
+      }
+   
+    </script>
   </body>
 </html>
+

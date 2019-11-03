@@ -14,6 +14,7 @@ body{
 }
 
 .stick-style{
+  position: absolute;
   text-align: center;
   top: 75%;
   left: 0;
@@ -36,14 +37,6 @@ body{
   font-weight: bold;
   text-align: center;
   top: 30%;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.stick-style4{
-  text-align: center;
-  top: 45%;
   left: 0;
   right: 0;
   margin: auto;

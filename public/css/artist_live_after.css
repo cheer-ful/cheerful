@@ -1,0 +1,16 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.ranking-body{
+  background-image: url("../images/backcolor.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.user-ranking-box{
+  
+}

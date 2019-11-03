@@ -43,7 +43,7 @@ function rank3NextClick() {
 }
 
 function go() {
-    window.location.href = "cheer.html?Lsev4ZFT9NaxPSBeDAr";
+    window.location.href = "golive.html";
 }
 
 function object_array_sort(data, key, order, fn) {
