@@ -29,18 +29,27 @@ function object_array_sort(data, key, order, fn) {
 
 window.onload = function(){
   // document.getElementById("main").classList.add('cheer-style');
-  setTimeout("next()",5000)
+  setInterval("next()",1000)
 }
 
 function next(){
-  document.getElementById("main").classList.add('cheer-style2');  
-  setTimeout("next2()",5000)
+
 }
 
-function next2(){
+function blue(){
+  document.getElementById("main").classList.remove('cheer-style');
+  document.getElementById("main").classList.remove('cheer-style3');    
+  document.getElementById("main").classList.add('cheer-style2');  
+}
+
+function green(){
+  document.getElementById("main").classList.remove('cheer-style'); 
+  document.getElementById("main").classList.remove('cheer-style2');   
   document.getElementById("main").classList.add('cheer-style3');  
 }
 
-function go() {
-  window.location.href = "thankyou.html";
+function red() {
+  document.getElementById("main").classList.remove('cheer-style2');  
+  document.getElementById("main").classList.remove('cheer-style3');  
+  document.getElementById("main").classList.add('cheer-style');  
 }

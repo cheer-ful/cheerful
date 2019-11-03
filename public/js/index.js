@@ -4,5 +4,5 @@ window.onload = function(){
 }
 
 function GoNextPage() {
-  window.location.href = 'ranking.html';
+  window.location.href = 'cheer.html';
 }
