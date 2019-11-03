@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CheerFul</title>
-    <link href="./css/footer.css" rel="stylesheet">
-    <!-- <script type="text/javascript" src="./js/footer.js"></script>  -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-  </head>
-  <body>
-    <div class="user-back">
-      <p class="stick-style3"><img src="./images/background_arrow.gif" height="350px" /></p>
-      <p class="sample1 stick-style"><img src="./images/stick.svg" width="80px" /></p>
-      <p class="stick-style2">応援する</p>
-    </div>
-    <script type="text/javascript" src="./js/jquery.pep.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('.sample1').pep();
-      });       
-      var getPosition = function(){
-        const pos = $('.sample1').offset();
-        if(pos.top <= 350){
-          $(document).ready(function(){
-            $('.sample1').fadeOut(800);
-          });     
-          window.setTimeout("window.location.href = 'explainCheer.html'", 1000 );
-        } 
-      } 
-      setInterval(getPosition, 1000);
-    </script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CheerFul</title>
+  <link href="./css/footer.css" rel="stylesheet">
+  <!-- <script type="text/javascript" src="./js/footer.js"></script>  -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="user-back">
+    <p class="stick-style3"><img src="./images/background_arrow.gif" height="350px" /></p>
+    <p class="sample1 stick-style"><img src="./images/stick.svg" width="80px" /></p>
+    <p class="stick-style2">応援する</p>
+  </div>
+  <script type="text/javascript" src="./js/jquery.pep.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.sample1').pep();
+    });
+    var getPosition = function () {
+      const pos = $('.sample1').offset();
+      if (pos.top <= 350) {
+        $(document).ready(function () {
+          $('.sample1').fadeOut(800);
+        });
+        window.setTimeout("window.location.href = 'explainCheer.html'", 1000);
+      }
+    }
+    setInterval(getPosition, 1000);
+  </script>
+</body>
+
 </html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CheerFul</title>
+  <link href="./css/footer.css" rel="stylesheet">
+  <!-- <script type="text/javascript" src="./js/footer.js"></script>  -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="user-back">
+    <img src="./images/background_maybe_white.gif" width="80px" />
+    <p class="sample1 stick-style"><img src="./images/stick.svg" width="80px" /></p>
+    <p class="stick-style2">応援する</p>
+  </div>
+  <script type="text/javascript" src="./js/jquery.pep.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.sample1').pep();
+    });
+    var getPosition = function () {
+      const pos = $('.sample1').offset();
+      if (pos.top <= 350) {
+        $(document).ready(function () {
+          $('.sample1').fadeOut(800);
+        });
+        window.setTimeout("window.location.href = 'explainCheer.html'", 1000);
+      }
+    }
+    setInterval(getPosition, 1000);
+  </script>
+</body>
+
+</html>

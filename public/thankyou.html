@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CheerFul</title>
-    <link href="./css/thankyou.css" rel="stylesheet">
-    <script type="text/javascript" src="./js/thankyou.js"></script>
-  </head>
-  <body>
-    <div class="ranking-body">
-      <div class="center" style="padding-top:150px;" onclick="go()"><img src="./images/thankyou.png" width="80%" class="img-circle" /></div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CheerFul</title>
+  <link href="./css/thankyou.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- <div class="ranking-body">
+    <div class="center" style="padding-top:150px;" onclick="go()"><img src="./images/thankyou.png" width="80%"
+        class="img-circle" /></div>
+    <div id="txt">ここにデータを表示</div>
+  </div> -->
+
+  <div class="con">
+
+    <button class="close" type="button" name="button" onclick="go()">
+      <img src="images/close.svg" alt="閉じる">
+    </button>
+
+    <div class="pt_con">
+      <div class="pt_text">
+        <div class="pt_text_top">
+          <p class="pt" id="txt">
+          </p>
+          <p class="small">pt</p>
+        </div>
+        <p class="ouen">応援しました！</p>
+      </div>
+
+      <button class="nagesen_btn" type="button" name="button">
+        <p>ポイント分の投げ銭をする</p>
+      </button>
+
     </div>
-  </body>
+  </div>
+
+  <script defer type="text/javascript" src="./js/thankyou.js"></script>
+</body>
+
 </html>

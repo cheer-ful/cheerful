@@ -14,12 +14,64 @@
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
     <link href="./css/ranking.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/age_body.css">
+    <link rel="stylesheet" href="./css/age_rank1.css">
+    <link rel="stylesheet" href="./css/age_rank2.css">
+    <link rel="stylesheet" href="./css/age_rank3.css">
 </head>
 
 <body>
-    <div class="ranking-body">
-        <div style="padding-top:150px;" onclick="go()"><img src="./images/ranking.svg" width="100%" /></div>
+    <div class="ageage">
+        <p class="age_txt">近くの<span class="orange">アゲアゲ</span>ライブランキング</p>
+        <div class="rank1">
+            <button onclick="rank1NextClick()">
+                <img src="images/age_orange.svg" alt="矢印">
+                <p id="rank1-name"></p>
+                <span class="big">
+                    <p id="rank1-distanse"></p>
+                </span>pt
+            </button>
+        </div>
+        <div class="rank2">
+            <button onclick="rank2NextClick()">
+                <img src="images/age_yellow.svg" alt="矢印">
+                <p id="rank2-name"></p>
+                <span class="big_2">
+                    <p id="rank2-distanse"></p>
+                </span> pt
+            </button>
+        </div>
+        <div class="rank3">
+            <button onclick="rank3NextClick()">
+                <img src="images/age_yellow.svg" alt="矢印">
+                <p id="rank3-name"></p>
+                <span class="big_2">
+                    <p id="rank3-distanse"></p>
+                </span>pt
+            </button>
+        </div>
+
     </div>
+
+    </div>
+
+    <!-- <div class="ranking-body">
+        <div style="padding-top:150px;" onclick="go()"><img src="./images/ranking.svg" width="100%" /></div>
+    </div> -->
+    <!-- <button onclick="rank1NextClick()">
+        <p id="rank1-name"></p>
+        <p id="rank1-distanse"></p>
+    </button>
+    <button onclick="rank2NextClick()">
+        <p id="rank2-name"></p>
+        <p id="rank2-distanse"></p>
+    </button>
+    <button onclick="rank3NextClick()">
+        <p id="rank3-name"></p>
+        <p id="rank3-distanse"></p>
+    </button> -->
+    <pre id="position_view"></pre>
+
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script defer src="js/ranking.js"></script>
 </body>

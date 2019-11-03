@@ -8,14 +8,14 @@ body{
   margin-top: 0px;
 }
 
-.cheer-style{
-  background-color: red;
+ .cheer-style{
+  /* background-color: red; */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
-
+/*
 .cheer-style2{
   background-color: blue;
   background-position: center center;
@@ -30,11 +30,12 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-}
+} */
 
 .aaa{
   position: absolute;
   right: 10px;
   top: 10px;
   font-size: 40px;
+  color:#F6CEE3;
 }
