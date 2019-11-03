@@ -44,46 +44,6 @@ var rank3Id = "";
 //     // return rad; //二点間角度
 // }
 
-if (navigator.geolocation) {
-    // alert("この端末では位置情報が取得できます");
-    // Geolocation APIに対応していない
-} else {
-    alert("この端末では位置情報が取得できません");
-}
-
-function getTime(gLatitude, gLongitude, tLatitude, tLongitude) {
-    let time = 0;
-    time += ((6371 * Math.acos(Math.cos(tLatitude) * Math.cos(gLatitude) * Math.cos(gLongitude - tLongitude) + Math.sin(tLatitude) * Math.sin(gLatitude))) * 1000) / 77 + "\n";
-    return time;
-}
-
-navigator.geolocation.getCurrentPosition(
-    // 取得成功した場合
-    function (position) {
-        //glocal scope
-        var gLatitude = position.coords.latitude * Math.PI / 180;
-        var gLongitude = position.coords.longitude * Math.PI / 180;
-        alert("緯度:" + position.coords.latitude + ",経度" + position.coords.longitude);
-        let time = getTime(gLatitude, gLongitude)
-    },
-    // 取得失敗した場合
-    function (error) {
-        switch (error.code) {
-            case 1: //PERMISSION_DENIED
-                alert("位置情報の利用が許可されていません");
-                break;
-            case 2: //POSITION_UNAVAILABLE
-                alert("現在位置が取得できませんでした");
-                break;
-            case 3: //TIMEOUT
-                alert("タイムアウトになりました");
-                break;
-            default:
-                alert("その他のエラー(エラーコード:" + error.code + ")");
-                break;
-        }
-    }
-);
 
 // artistRef.push({ name: "name", point: 0, location_x: "", location_y: "", color: "green" });
 artistRef.on('value', function (snapshot) {
