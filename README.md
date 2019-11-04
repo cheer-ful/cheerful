@@ -1,4 +1,4 @@
-# 📣Cheerful
+# Cheerful
 
 Cheerful is created "タピオカ.md" in OthloHack2019.
 
