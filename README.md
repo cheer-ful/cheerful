@@ -1,4 +1,4 @@
-# Cheerful
+# 📣Cheerful
 
 Cheerful is created "タピオカ.md" in OthloHack2019.
 
@@ -7,6 +7,6 @@ Cheerful is created "タピオカ.md" in OthloHack2019.
 <img width="814" alt="choiced-skill" src="https://user-images.githubusercontent.com/36298285/68101790-c6b8ba00-ff12-11e9-8af1-9e3db9af52a6.png">
 
 
-# award
+# 🎉award
 
 Best Emotional Award by proto corporation!!
